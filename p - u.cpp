@@ -19,8 +19,6 @@ public: //metody i zmienne sa publiczne aby mogl ich uzywac pasazer oraz winda
     bool stop_button; //0 - not pressed, 1 - pressed
     void push_alarm_button();
     void push_stop_button();
-    void unpush_alarm_button();
-    void unpush_stop_button();
 };
 
 class Person
