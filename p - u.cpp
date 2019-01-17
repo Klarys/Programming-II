@@ -58,31 +58,43 @@ private:
 //DOOR
 void open_door(Door &d)
 {
-    d.wing = 1;
+    if(d.wing == 0)
+    {
+       d.wing = 1;
+    }
 }
 void close_door(Door &d)
 {
-    d.wing = 0;
+    if(d.wing == 1)
+    {
+       d.wing = 0;
+    }
+   
 }
-
 //BUTTON_PANEL
 void Button_Panel::push_alarm_button()
 {
-    this->alarm_button=1;
+    if(this->alarm_button == 0)
+    {
+        this->alarm_button = 1;
+    }
+    else if(this->alarm_button == 1)
+    {
+        this->alarm_button = 0;
+    }
+    
 }
 
 void Button_Panel::push_stop_button()
 {
-    this->stop_button=1;
-}
-void Button_Panel::unpush_alarm_button()
-{
-    this->alarm_button=0;
-}
-
-void Button_Panel::unpush_stop_button()
-{
-    this->stop_button=0;
+    if(this->stop_button == 0)
+    {
+        this->stop_button = 1;
+    }
+    else if(this->stop_button == 1)
+    {
+        this->stop_button = 0;
+    }
 }
 
 //PERSON
